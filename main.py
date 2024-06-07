@@ -1,6 +1,10 @@
 from flask import request, jsonify
 from config import app, db
 from models import Seccion, Carrera, Estudiante, EstudiantePorSeccion
+from analisis import limpieza
+
+limpieza()
+
 
 @app.route('/secciones', methods=['GET'])
 def get_secciones():
